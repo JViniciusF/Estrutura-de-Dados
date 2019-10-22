@@ -1,0 +1,21 @@
+Filas- First in First out 
+pirmeiro que entra , prime]iro que sai
+
+outro exemplo , jogos estilo labirinto . comeco de um ponto , enfilero as possibilidades, e continuo o jogo enquanto a fila nao estiver vazia 
+exemplo : labirinto
+uma formiga comeca numa posicao , tenho um obstaculo , tenho uma saida , enfilero a posicao inicial da formiga, e vou vendo as posiçoes vizinhas , enfileo tudo o que nao e obstaculo
+
+Problema que iremos analisar , tenho uma rede , quero saber as distancias minimas para um no de origem , ou voce pensar cidades , onde quero saber a distancia ate as outras cidades
+
+Estrutura de dados para as ligaçoes é uma matriz de zeros e uns , zero significa caminho da cidade linha ate a cidade coluna
+
+
+como vou calcular a distancia da cidade origem 3 , para as outras cidades? 
+usando fila ! eu coloco a origem 
+
+enfilero 2 e 4 . a distancia é 1 . tiro 2 da fila . de 2 eu cheo em 4 , porem  ja tinha visitado 4 , repeti . entao vou ter que marcar as cidades ja visitadas ! vou ter uma lista que comeca com -1 em todas as cidades . quando visitar , coloco a distancia que percorri . quando tiver valor diferente de -1 , significa que ja passei la
+Entao tiro o 4 da fila , posso chegar em 0 . 
+cidade 0 está com -1 , nunca visitei, como andei 1 de 3 ate 4 , a distancia de 3 ate 0 sera +2
+Vou ter 0 na fila , posso chegar em 1 , que nunca passei. a distancia sera +3 , enfilero 1 . a partir de 1  so posso chegar em 2 . So que em 2 ja passei
+A fila ficou vazia , pois ja tentei tudo . a cidade 5 fica com -1 , porque na o da para chegar nela!
+Entao o vetor de distancias minimas , partindo da cidade 3 para as demais e  [+2,+3,+1,0,+1,-1]

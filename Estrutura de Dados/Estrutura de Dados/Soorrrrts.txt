@@ -1,0 +1,58 @@
+ 
+--------INSERCAO-------
+
+3 4 2 5 6 7 0 1 
+3 
+3 4 
+2 3 4 
+2 3 4 5 
+2 3 4 5 6 
+2 3 4 5 6 7 
+0 2 3 4 5 6 7
+0 1 2 3 4 5 6 7
+------------------------
+
+--------SELECAO---------
+
+3 4 2 5 6 7 0 1 
+0 4 2 5 6 7 3 1 
+0 1 2 5 6 7 3 4 
+0 1 2 5 6 7 3 4 
+0 1 2 3 6 7 5 4 
+0 1 2 3 4 7 5 6
+0 1 2 3 4 5 7 6
+0 1 2 3 4 5 6 7 
+0 1 2 3 4 5 6 7
+
+
+----------------------  
+
+--------Mergsort-------
+[3 4 2 5 6 7 0 1 
+
+[3 4 2 5]  [6 7 0 1]
+ 
+[3 4]  [2 5]  [6 7]  [0 1] 
+
+[3] [4] [2] [5] [6] [7] [0] [1] 
+
+[2 3 4 5]   [0 1 6 7]
+
+[0 1 2 3 4 5 6 7]
+
+Merg gasta n operacoes . Recursao demora log(n,2) para chegar ate <= 1
+custo total : n*log(n,2)
+porem , vou precisa de uma lista auxiliar de tamanho n , ou seja , gasto o dobro do espaco]
+conclusao: para analisar um algoritimo sempre veja o numero de passos e tambem o espaco gasto
+mais analise: as duas metades na recursao sao independentes, logo passo fazer em paralelo
+
+--------------------------
+
+--------Quicksort-----------
+6 0 4 2 3 7 1 5 
+0 4 2 3 1 5 6 7
+0 2 3 1 4 5 6 7
+0 1 2 3 4 5 6 7 
+
+
+   

@@ -1,0 +1,6 @@
+Os algoritmos de força bruta testam todas as possibilidades, por isso são muito lentos.
+O interessante é que mesmo entre programas lentos existem comparações;
+Permutações custam n! passos
+Subconjuntos custam 2**n passos
+
+N! é pior 2**N

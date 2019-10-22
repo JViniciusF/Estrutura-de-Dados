@@ -1,0 +1,146 @@
+Para passar você precisa de nota mínima 6 tanto nos trabalhos, como nas provas
+NF = mínimo (EP, P) caso contrário
+
+EP = (EP1 + 2*EP2 + 2*EP3 + 3*EP4) / 8
+P = (P1 + 2*P2) / 3
+NF = (EP + P * 2) / 3
+
+Na última semana teremos uma Substitutiva, com a matéria toda
+Qualquer pessoa poderá fazer a Sub
+Não teremos exame no próximo semestre
+
+Tutorial Ciência de Dados
+https://www.kaggle.com/kanncaa1/data-sciencetutorial-for-beginners
+
+EP4 (16 de junho): Análise de Dados Públicos
+Informações bit.ly/pybrpandas e aqui (em baixo)
+Livro para Ciência de Dados Free:
+https://jakevdp.github.io/PythonDataScienceHandbook/
+Código do livro acima:
+https://github.com/jakevdp/PythonDataScienceHandbook
+
+
+EP1: entrega para 31 de março (domingo)
+https://www.dropbox.com/s/cvzep49d3khwfxt/Estrutura%20de%20Dados%20-%20EP01%20-%202019.pdf?dl=0
+
+EP2: entrega para 21 de abril (domingo)
+https://www.dropbox.com/s/xfxu90mdbxneqf8/EP2.zip?dl=0
+
+Merlin.py
+https://www.dropbox.com/s/p3tk9jsibi63fj0/Merlin.py?dl=0
+
+EP3: entrega para 12 de maio (domingo)
+https://www.dropbox.com/s/qwn0r74ovyhava9/Estrutura%20de%20Dados%20-%20EP03-1o%20semestre%202019.pdf?dl=0
+
+
+def quicksort(lista):
+    if len(lista) <= 1: 
+        return lista
+    
+    pivô = lista[0]
+    iguais  = [x for x in lista if x == pivô]
+    menores = [x for x in lista if x <  pivô]
+    maiores = [x for x in lista if x >  pivô]
+    return quicksort(menores) + \
+           iguais + quicksort(maiores)
+
+print (quicksort([2, 7, 0, 3, 4, 9, 8, 1, 5, 6]))
+
+	
+def inserção(v):
+ for j in range(1, len(v)):
+   x = v[j]
+   i = j - 1
+   while i >= 0 and v[i] > x:
+     v[i + 1] = v[i]
+     i = i - 1
+   v[i + 1] = x
+ return v
+
+def seleção(v):
+  resp = []
+  while v:
+    m = min(v)
+    resp.append(m)
+    v.remove(m)
+  return resp
+
+print (inserção([3, 0, 1, 2, 5, 7, 6, 4]))
+print (seleção([3, 0, 1, 2, 5, 7, 6, 4]))
+
+def merge(e, d):
+    r = []
+    i, j = 0, 0
+    while i < len(e) and j < len(d):
+        if e[i] <= d[j]:
+            r.append(e[i])
+            i += 1
+        else:
+            r.append(d[j])
+            j += 1
+    r += e[i:]
+    r += d[j:]
+    return r
+
+def mergesort(v):
+    if len(v) <= 1:
+        return v
+    else:
+        m = len(v) // 2
+        e = mergesort(v[:m])
+        d = mergesort(v[m:])
+        return merge(e, d)
+
+print (mergesort([3, 4, 8, 0, 6, 7, 4, 2, 1, 9, 4, 5]))
+
+
+Material de Teoria dos Grafos (não cai na primeira prova): https://www.dropbox.com/s/9m1050m3xj6cgsw/ETG%20julho%202012.pdf?dl=0
+
+Slides Algoritmos em C: https://www.ime.usp.br/~pf/algoritmos-livro/slides/SLIDES-A-handout.pdf
+
+Códigos em C: 
+https://www.dropbox.com/s/86ibey5tlt5cd1m/ED.zip?dl=0
+
+Lista Exercícios Listas Encadeadas: https://www.dropbox.com/s/pj3x75gmjg8cn9b/Lista%20de%20Exerc%C3%ADcios%20Listas%20Encadeadas%20ED%202011-01.pdf?dl=0
+
+
+Dicas de vizualizações: https://towardsdatascience.com/5-quick-and-easy-data-visualizations-in-python-with-code-a2284bae952f
+
+Entrega do trabalho de Análise de Dados Públicos até 3
+
+Colinha:
+
+bit.ly/pybrpandas
+
+Trabalho em dupla para a nota do 2o bimestre:
+
+1. Análise de Dados Públicos, como o feito da Fila do SUS de SC, com Pandas e outras libs
+Procurar no Google cheat sheet pandas
+
+https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf 
+
+2. Definir primeiro a base de Dados, não é necessário raspar, não há tempo para isso, mas usar em algum formato legível pelo Pandas (JSON, CSV, Excel, etc)
+
+https://www.kaggle.com/
+DATASUS Tabnet
+Transparencia.gov.br
+dados.gov.br
+brasil.io/datasets
+http://www.transparencia.df.gov.br/#/servidores/remuneracao
+http://www.ssp.sp.gov.br/transparenciassp/
+
+OBS.: você pode usar qualquer base de Dados, só não quero que percam tempo raspando
+
+3. Definir a Análise que será feita em cima dos Dados escolhidos
+
+4. A Análise deverá conter alguma visualização (simples)e obrigatoriamente usando Jupyter Notebook
+
+5. Você irá entregar os Dados e o arquivo *.ipynb
+
+6. Exemplo de trabalho: https://github.com/guilhermeFaria/Data-Analysis-stolen-cars
+
+
+Configuração para o 2o bimestre: https://github.com/fmasanori/treinamento
+
+EP2: https://www.dropbox.com/s/naetew0jn0hf28m/Estrutura%20de%20Dados%20-%20EP02%20-%202o%20semestre%202018.pdf?dl=0
+

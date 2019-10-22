@@ -1,0 +1,23 @@
+Regras de ponteiros :
+1. Ponteiro e coisas apontadas sao indenpendentes , diferentes!!
+2. So tem sentido um ponteiro que aponta para algo!!
+3. Cuidado em C podemos ter ponteiros que nao apontam para nada , nao causam erro de sintaxe, problema e que seu programa vai fazer coisas diferentes conforme o lixo esta na memoria do ponteiro!
+4. *** SIGNIFICA CONTEUDO , & SIGNIFICA O ENDERECO DE MEMORIA
+
+Ponteiro tem uma função importante em C
+
+As duas principais sao:
+1. Passagem de parâmetro por referencia numa funcao
+2. Declaração de um vetor de tamanha dinâmico , em tempo de execução
+	Em C int *v possui dois significados. pode ser um ponteiro para um único inteiro , ou pode ser um vetor de alocação 		dinâmica.
+
+			Atenção 
+	nova-> conteudo é uma abreviatura de (*nova).conteudo
+
+Por que eu insiro no inicio , numa lista encadeada?
+porque se inserir no final , tenho que andar ate o fim !! . Isso e muito ineficiente.
+por isso insiro no inicio , 3,5,10 tenho que comecar pelo 10 e em seguida 5 e 3
+
+Para que ser ter uma cabeca na lista ?
+1) /Nas funções insere e remove, nao preciso perguntar toda hora , se a lista esta vazia
+2) Se eu fosse mudar o apontador para o inicio da lista , teria que passar ponteiro para ponteiro.Voce concorda que lst é um ponteiro (inicio da lista) se eu passar lst como referencia , terei que fazer &lst ou seja , dentro da função será *(*lst), isto é ponteiro para um ponteiro. nao precisa testar lista vazia e nao precisa testar ponteiro para ponteiro.
