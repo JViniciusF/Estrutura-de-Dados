@@ -100,7 +100,7 @@ else:
 
 '''Segunda Parte do EP2'''
 
-arqv2 = open('cavaleiros.txt','r')
+arqv2 = open('cavaleiros no.txt','r')
 
 for line in arqv2:
     mudar2 = line.split()
@@ -108,14 +108,53 @@ for line in arqv2:
     
 cavaleiros= dict(zip(cavaleiro,regra2))
 
-jaForam = []
-i = 0
+Adriano = []
+Bruno = []
+Diogo = []
+Eclis = []
+Gabrie = []
+Leandro = []
+Walber = []
+
+jaForam= []
 
 for x in cavaleiros:
-    if x not in jaForam:
-        jaForam.append(x)
-
     for moco in cavaleiros[x]:
+
+        if x == 'Adriano':
+            Adriano.append(moco)
+            
+        if x == 'Bruno':
+            Bruno.append(moco)
+
+        if x == 'Diogo':
+            Diogo.append(moco)
+                
+
+        if x == 'Eclis':
+            Eclis.append(moco)
+
+                
+        if x == 'Gabriel':
+            Gabriel.append(moco)
+                
+
+        if x == 'Leandro':
+            Leandro.append(moco)
+                
+
+        if x == 'Walber':
+            Walber.append(moco)
+                
+        else :
+            continue
+
+
+for y in cavaleiro:
+    if y not in jaForam:
+        jaForam.append(y)
+
+    for moco in cavaleiros[y]:
 
         if moco in jaForam: 
             continue
@@ -123,6 +162,35 @@ for x in cavaleiros:
         else:
             i = moco
             jaForam.append(moco)
-            cavaleiros[x].remove(i)
+            
+            if moco in Adriano and 'Adriano' in moco:
+                Adriano.remove(moco)
+                moco.remove('Adriano')
+                
+            if moco in Bruno and 'Bruno' in moco:
+                Bruno.remove(moco)
+                cavaleiros[moco].remove('Bruno')
+
+            if moco in Diogo and 'Diogo' in moco:
+                Diogo.remove(moco)
+                cavaleiros[moco].remove('Diogo')
+
+            if moco in Eclis and 'Eclis' in moco:
+                Eclis.remove(moco)
+                cavaleiros[moco].remove('Eclis')
+                    
+            if moco in Gabriel and 'Gabriel' in moco:
+                Gabriel.remove(moco)
+                cavaleiros[moco].remove('Gabriel')
+
+            if moco in Leandro and 'Leandro' in moco:
+                Leandro.remove(moco)
+                cavaleiros[moco].remove('Leandro')
+
+            if moco in Walber and 'Welber' in moco:
+                Walber.remove(moco)
+                cavaleiros[moco].remove('Welber')
+                    
             break
-    x = i
+    y = i
+    continue
