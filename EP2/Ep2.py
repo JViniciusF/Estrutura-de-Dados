@@ -108,21 +108,32 @@ for line in arqv2:
     
 cavaleiros= dict(zip(cavaleiro,regra2))
 
-jaForam = []
-i = 0
-
-for x in cavaleiros:
-    if x not in jaForam:
-        jaForam.append(x)
-
-    for moco in cavaleiros[x]:
-
-        if moco in jaForam: 
-            continue
-
-        else:
-            i = moco
-            jaForam.append(moco)
-            cavaleiros[x].remove(i)
-            break
-    x = i
+lista = []
+for t in cavaleiros:
+    if t not in lista:
+        lista.append(t)
+    for u in cavaleiros[t]:
+        if u not in lista:
+            lista.append(u)
+            for u in cavaleiros[u]:
+                if u not in lista:
+                    lista.append(u)
+                    for u in cavaleiros[u]:
+                        if u not in lista:
+                            lista.append(u)
+                            for u in cavaleiros[u]:
+                                if u not in lista:
+                                    lista.append(u)
+                                    for u in cavaleiros[u]:
+                                        if u not in lista:
+                                            lista.append(u)
+                                            for u in cavaleiros[u]:
+                                                if u not in lista:
+                                                    lista.append(u)
+                                                    for u in cavaleiros[u]:
+                                                        if u in t:
+                                                            print(f"Será possível sentar os cavaleiros da seguinte forma:\n{lista}")
+                                                            break
+                                                        else:
+                                                            print("Não é possivel arrumar os lugares")
+                                                            break
