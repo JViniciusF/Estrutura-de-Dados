@@ -1,3 +1,4 @@
+print ('\tEp 2 \n Jose Vinicius Ferreira Santana 3 ADS B\n')
 arqv = open('casamento.txt','r')
 
 regra = []
@@ -135,5 +136,5 @@ for t in cavaleiros:
                                                             print(f"Será possível sentar os cavaleiros da seguinte forma:\n{lista}")
                                                             break
                                                         else:
-                                                            print("Não é possivel arrumar os lugares")
+                                                            print("Não é possivel arrumar os cavaleiros nos lugares com suas preferencias")
                                                             break

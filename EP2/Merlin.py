@@ -32,4 +32,4 @@ for p in enumerações(['Jessica', 'Fernanda', 'Pamela', 'Renata']):
 x = input('Digite algo...')
 print ('Permutações')
 for p in permutações(['Adriano','Bruno', 'Diogo', 'Eclis', 'Gabriel', 'Leandro', 'Walber']):
-    print (p)
+    print (p)z
