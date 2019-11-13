@@ -1,4 +1,6 @@
-arqv='''010
+print("\t ED - Ep3 \n Jose Vinicius Ferreira Santana - 3 Ads B \n")
+
+arqv1='''010
 111
 000
 101
